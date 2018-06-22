@@ -1,4 +1,4 @@
-# signs
+<img src='https://raw.githubusercontent.com/autonomio/signs/master/logo.png'>
 
 A set of tools for text preparation, vectorization and processing.
 
