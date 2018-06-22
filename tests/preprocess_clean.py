@@ -1,4 +1,4 @@
-from signs.preprocess.clean import Clean
+from signs import Clean
 
 p = Clean(' Jack is a green 😂😂😂 cat... \n with a hat \n  ')
 
