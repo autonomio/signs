@@ -52,9 +52,9 @@ if __name__ == "__main__":
           download_url=DOWNLOAD_URL,
           install_requires=install_requires,
           packages=['signs',
-                    'talos.preprocess',
-                    'talos.vectorize',
-                    'talos.similarity'],
+                    'signs.preprocess',
+                    'signs.vectorize',
+                    'signs.similarity'],
 
           classifiers=[
                      'Intended Audience :: Science/Research',
