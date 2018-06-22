@@ -12,7 +12,7 @@ install:
  - pip install coveralls
 #before_script:
 script:
- - coverage run --source=signs ./tests/preprocess_clean.py
+ - coverage run --source=signs ./test_script.py
 after_success: coveralls
 
 deploy:
