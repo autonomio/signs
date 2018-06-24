@@ -35,13 +35,13 @@ In one picture, all contributions should keep in mind that great software is bui
 
 ## 1. Ways to contribute <a name="ways-to-contribute"></a>
 
-There are several ways programmers, data scientists and others can contribute to Autonomio.
+There are several ways programmers, data scientists and others can contribute to Signs.
 
 #### 1.1. Contributing Code <a name="code"></a>
 
 ##### 1.1.0. Note on Philosophy and Style
 
-**AUTONOMIO DEV PHILOSOPHY**
+**SIGNS DEV PHILOSOPHY**
 
 - Doing is more interesting than achieving
 - Having fun is more important than being productive
@@ -80,12 +80,12 @@ We also make the best effort in moving towards following pep20:
 
 ##### 1.1.1. Contribute to Open Issues
 
-It will be great if you can contribute some code to Autonomio. To do this, the best way is to:
+It will be great if you can contribute some code to Signs. To do this, the best way is to:
 
-1) check out the [open issues](https://github.com/autonomio/core-module/issues)
+1) check out the [open issues](https://github.com/autonomio/signs/issues)
 2) join the conversation and share your willingness to contribute
 3) somebody will help you get started / provide more details if needed
-4) fork [the current dev](https://github.com/autonomio/core-module/issues#fork-destination-box) branch
+4) fork [the current dev](https://github.com/autonomio/signs/issues#fork-destination-box) branch
 5) make your changes to your own fork/repo
 6) test, test, test
 7) if it's a new feature, make changes to test_script.py accordingly
@@ -106,17 +106,17 @@ Do this before committing as it ensures that basic sanity checks are done before
 
 #### 1.1.2. Contribute to a New Idea
 
-Same as above, but start by [creating a new issue](https://github.com/autonomio/core-module/issues/new) to open a discussion on the idea you have for contribution.
+Same as above, but start by [creating a new issue](https://github.com/autonomio/signs/issues/new) to open a discussion on the idea you have for contribution.
 
 ### 1.2. Contributing Ideas  <a name="ideas"></a>
 
-In case you don't want to contribute code, but have a feature request or some other idea, that is a great contribution as well and will be much appreciated. You can do it by [creating a new issue](https://github.com/autonomio/core-module/issues/new).
+In case you don't want to contribute code, but have a feature request or some other idea, that is a great contribution as well and will be much appreciated. You can do it by [creating a new issue](https://github.com/autonomio/signs/issues/new).
 
 <img src="https://mrwweb.com/wp-content/uploads/2012/05/dilbertMay72012-600x186.gif">
 
 ### 1.3. Contributing Testing  <a name="testing"></a>
 
-In case you don't want to contribute code, but have a feature request or some other idea, that is a great contribution as well and will be much appreciated. You can do it by [creating a new issue](https://github.com/autonomio/core-module/issues/new).
+In case you don't want to contribute code, but have a feature request or some other idea, that is a great contribution as well and will be much appreciated. You can do it by [creating a new issue](https://github.com/autonomio/signs/issues/new).
 
 **Testing comes in two forms:**
 
