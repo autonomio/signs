@@ -55,6 +55,8 @@ if __name__ == "__main__":
                     'signs.preprocess',
                     'signs.vectorize',
                     'signs.tests',
+                    'signs.grams',
+                    'signs.utils',
                     'signs.similarity'],
 
           classifiers=[
