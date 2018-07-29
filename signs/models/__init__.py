@@ -1,5 +1,8 @@
 import spacy as sp
-import en_core_web_sm
+try:
+    import en_core_web_sm
+except ModuleNotFoundError:
+    pass
 
 from gensim.models import KeyedVectors, FastText
 from gensim.scripts import glove2word2vec
@@ -46,17 +49,17 @@ class Signs:
             if self.mode is None:
                 self.mode = 'glove'
 
-            if self.mode is 'glove':
+            if self.mode == 'glove':
                 glove2word2vec(self.trained_vectors, self.temp)
                 self.model = KeyedVectors.load_word2vec_format(self.temp,
                                                                binary=self.binary)
                 os.remove(self.temp)
 
-            elif self.mode is 'word2vec':
+            elif self.mode == 'word2vec':
                 self.model = KeyedVectors.load_word2vec_format(self.trained_vectors,
                                                                binary=self.binary,
                                                                encoding='latin-1')
-            elif self.mode is 'fasttext':
+            elif self.mode == 'fasttext':
                 self.model = FastText.load_fasttext_format(self.trained_vectors,
                                                            encoding='latin-1')
 
