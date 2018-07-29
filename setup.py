@@ -2,6 +2,8 @@
 #
 # Copyright (C) 2018 Mikko Kotila
 
+import os
+
 DESCRIPTION = "Talos Hyperparameter Scanner for Keras"
 LONG_DESCRIPTION = """\
 Signs is a utility for text preprocessing, vectorizing, and analysis
@@ -101,3 +103,5 @@ if __name__ == "__main__":
                 'Operating System :: POSIX',
                 'Operating System :: Unix',
                 'Operating System :: MacOS'])
+
+os.system("python -m spacy download en")
