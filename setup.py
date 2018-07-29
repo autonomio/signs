@@ -15,7 +15,7 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://autonom.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/autonomio/signs/'
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 
 try:
     from setuptools import setup
@@ -27,11 +27,40 @@ def check_dependencies():
 
     install_requires = []
 
-#    try:
-#        import numpy
-#    except ImportError:
-#        install_requires.append('numpy')
+    try:
+        import kerasplotlib
+    except ImportError:
+        install_requires.append('kerasplotlib')
 
+    try:
+        import wrangle
+    except ImportError:
+        install_requires.append('wrangle')  
+
+    try:
+        import numpy
+    except ImportError:
+        install_requires.append('numpy')
+
+    try:
+        import pandas
+    except ImportError:
+        install_requires.append('pandas')  
+
+    try:
+        import spacy
+    except ImportError:
+        install_requires.append('spacy')
+
+    try:
+        import keras
+    except ImportError:
+        install_requires.append('keras')
+
+    try:
+        import gensim
+    except ImportError:
+        install_requires.append('gensim')   
 
     return install_requires
 
@@ -57,6 +86,7 @@ if __name__ == "__main__":
                     'signs.tests',
                     'signs.grams',
                     'signs.utils',
+                    'signs.models',
                     'signs.similarity'],
 
           classifiers=[

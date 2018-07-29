@@ -1,4 +1,5 @@
-from signs import Clean
+from ..preprocess.clean import Clean
+
 
 def run_test():
 
