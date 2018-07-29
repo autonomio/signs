@@ -6,11 +6,11 @@ def run_test():
     model = spacy_load()
     model = spacy_load('en')
 
-    if round(sum(spacy_word2vec('test',
-                                model)), 2) != 2.40:
-        raise ValueError('spacy_word2vec() test failed')
+    test = round(sum(spacy_word2vec('test', model)), 2)
+    test2 = round(sum(spacy_word2vec('testing sentence', model)), 2)
 
-    if round(sum(spacy_word2vec('testing sentence',
-                                model)), 2) != -0.72:
+    if test != 2.41:
+        raise ValueError('spacy_word2vec() test failed with %f' % test)
 
-        raise ValueError('spacy_word2vec() test failed')
+    if test2 != -0.72:
+        raise ValueError('spacy_word2vec() test failed with %f' % test)
