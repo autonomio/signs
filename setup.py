@@ -86,7 +86,7 @@ if __name__ == "__main__":
                     'signs.tests',
                     'signs.grams',
                     'signs.utils',
-                    'signs.models'
+                    'signs.models',
                     'signs.similarity'],
 
           classifiers=[
