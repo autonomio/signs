@@ -65,6 +65,11 @@ def check_dependencies():
     except ImportError:
         install_requires.append('gensim')
 
+    try:
+        import tensorflow
+    except ImportError:
+        install_requires.append('tensorflow')
+        
     return install_requires
 
 
