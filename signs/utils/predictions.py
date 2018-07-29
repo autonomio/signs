@@ -2,21 +2,22 @@ import pandas as pd
 from .converters import embeds_to_text
 from kerasplotlib.text import text
 
+
 class Preds:
 
     def __init__(self, x_test, y_test, word_index, model):
-  
+
         # temp values
-        self.model = model      
+        self.model = model
         self.x_test = x_test
         self.y_test = y_test
         self.word_index = word_index
-  
+
         self.results = self._preds_df()
-        
+
         # delete temp values
         del self.word_index, self.y_test, self.x_test, self.model
-        
+
     def _preds_df(self):
 
         '''
@@ -27,13 +28,12 @@ class Preds:
         '''
 
         results = pd.DataFrame({
-                                'text' : embeds_to_text(self.x_test, self.word_index),
-                                'pred' : [i[0] for i in self.model.predict(self.x_test)],
-                                'truth' : self.y_test
+                    'text': embeds_to_text(self.x_test, self.word_index),
+                    'pred': [i[0] for i in self.model.predict(self.x_test)],
+                    'truth': self.y_test
                             })
 
         return results
-
 
     def summary(self, sensitivity=.1, n=5):
 
@@ -45,7 +45,6 @@ class Preds:
 
         neg = self.results[self.results.pred < sensitivity].sample(n, replace=True)
         text(neg, 'text', title='Clear Negative', max_rows=5)
-
 
     def falses(self, sensitivity=.1, n=5):
 

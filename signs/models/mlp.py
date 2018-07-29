@@ -30,7 +30,7 @@ def mlp(x,
 
     # add layers
     model = layers_dense(model, layers, dropout, inner_neurons)
-    
+
     model.add(Dense(1, activation='sigmoid'))
     model.compile(optimizer='adam', loss=loss, metrics=['acc'])
     model.fit(x, y,
@@ -39,17 +39,17 @@ def mlp(x,
               verbose=0,
               validation_split=.3,
               callbacks=[TrainingLog()])
-    #loss, accuracy = model.evaluate(x, y, verbose=0)
+    # loss, accuracy = model.evaluate(x, y, verbose=0)
 
     return model
 
 
 def layers_dense(model, layers, dropout, inner_neurons):
-    
+
     if layers > 0:
-    
+
         for i in range(layers):
             model.add(Dense(inner_neurons))
             model.add(Dropout(dropout))
-    
+
     return model

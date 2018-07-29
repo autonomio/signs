@@ -4,8 +4,8 @@
 
 DESCRIPTION = "Talos Hyperparameter Scanner for Keras"
 LONG_DESCRIPTION = """\
-Signs is a utility for text preprocessing, vectorizing, and analysis 
-such as semantic similarity, mainly for the purpose of using unstructured 
+Signs is a utility for text preprocessing, vectorizing, and analysis
+such as semantic similarity, mainly for the purpose of using unstructured
 data in deep learning models.
 """
 
@@ -23,6 +23,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
+
 def check_dependencies():
 
     install_requires = []
@@ -35,7 +36,7 @@ def check_dependencies():
     try:
         import wrangle
     except ImportError:
-        install_requires.append('wrangle')  
+        install_requires.append('wrangle')
 
     try:
         import numpy
@@ -45,7 +46,7 @@ def check_dependencies():
     try:
         import pandas
     except ImportError:
-        install_requires.append('pandas')  
+        install_requires.append('pandas')
 
     try:
         import spacy
@@ -60,9 +61,10 @@ def check_dependencies():
     try:
         import gensim
     except ImportError:
-        install_requires.append('gensim')   
+        install_requires.append('gensim')
 
     return install_requires
+
 
 if __name__ == "__main__":
 
@@ -90,13 +92,12 @@ if __name__ == "__main__":
                     'signs.similarity'],
 
           classifiers=[
-                     'Intended Audience :: Science/Research',
-                     'Programming Language :: Python :: 3.6',
-                     'License :: OSI Approved :: MIT License',
-                     'Topic :: Scientific/Engineering :: Human Machine Interfaces',
-                     'Topic :: Scientific/Engineering :: Artificial Intelligence',
-                     'Topic :: Scientific/Engineering :: Mathematics',
-                     'Operating System :: POSIX',
-                     'Operating System :: Unix',
-                     'Operating System :: MacOS'],
-)
+                'Intended Audience :: Science/Research',
+                'Programming Language :: Python :: 3.6',
+                'License :: OSI Approved :: MIT License',
+                'Topic :: Scientific/Engineering :: Human Machine Interfaces',
+                'Topic :: Scientific/Engineering :: Artificial Intelligence',
+                'Topic :: Scientific/Engineering :: Mathematics',
+                'Operating System :: POSIX',
+                'Operating System :: Unix',
+                'Operating System :: MacOS'])

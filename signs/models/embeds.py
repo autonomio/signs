@@ -9,21 +9,22 @@ class Embeds:
 
     def __init__(self, trained_vectors):
 
-        self.embeddings_index, self.vector_dims = keras_embeddings(trained_vectors)
-        
+        self.t_v = trained_vectors
+        self.embeddings_index, self.vector_dims = keras_embeddings(self.t_v)
+
     def _matrix(self):
-        
+
         self.x, self.vocab_size, self.word_index = keras_tokenize(self.docs)
-        self.embedding_matrix = keras_embedding_matrix(self.word_index, 
-                                                       self.vector_dims, 
+        self.embedding_matrix = keras_embedding_matrix(self.word_index,
+                                                       self.vector_dims,
                                                        self.embeddings_index)
 
     def layer(self, docs):
-        
+
         self.docs = docs
 
         self._matrix()
-        
+
         embeddding_layer = Embedding(self.vocab_size,
                                      self.vector_dims,
                                      weights=[self.embedding_matrix],
