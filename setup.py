@@ -69,7 +69,12 @@ def check_dependencies():
         import tensorflow
     except ImportError:
         install_requires.append('tensorflow')
-        
+
+    try:
+        import ipython
+    except ImportError:
+        install_requires.append('ipython')
+
     return install_requires
 
 
