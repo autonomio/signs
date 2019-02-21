@@ -4,8 +4,7 @@ def embeds_to_text(x_test, word_index):
 
     Takes in keras embeddings and converts it back to text.
     Note that the resulting strings are limited by max_words
-    from tokenization. Use embeds_to_original() to get the full
-    string instead.'''
+    from tokenization.'''
 
     l = []
 
@@ -17,8 +16,3 @@ def embeds_to_text(x_test, word_index):
         l.append(sentence)
 
     return l
-
-
-def embeds_to_original():
-
-    return

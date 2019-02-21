@@ -3,10 +3,30 @@ import string
 
 class Clean:
     
-    def __init__(self, text):
+    def __init__(self, text, auto=False, remove_string=''):
         
         self.text = text
+        self.remove_string = remove_string
+
+        if auto:
+        	self._null_ = self.automated()
+
+    def automated(self):
+
+    	self.text = self.decod()
+    	self.text = self.low()
+    	self.text = self.links()
+    	self.text = self.emoji()
+    	self.text = self.punct()
+    	self.text = self.linebreaks()
+    	self.text = self.string()
+    	self.text = self.leadtrail()
         
+
+    def string(self):
+    	'''remove arbitrary string'''
+    	return self.text.replace(self.remove_string, '')
+
     def low(self):
         
         '''make string lowercase'''
@@ -38,6 +58,17 @@ class Clean:
         '''remove linebreaks'''
 
         return self.text.replace('\n', ' ').replace('\r', '')
+        
+    def decod(self):
+        '''decode binary'''
+        try:
+            return self.text.decode()
+        except AttributeError:
+            return self.text
+        
+    def links(self):
+        '''remove links'''
+        return re.sub(r'http\S+', '', self.text)
         
     def emoji(self):
         
