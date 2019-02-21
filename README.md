@@ -9,16 +9,17 @@
 <p align="center">
 
   <a href="https://travis-ci.org/autonomio/talos">
-    <img src="https://img.shields.io/travis/autonomio/signs/master.svg?style=for-the-badge&logo=appveyor" alt="Talos Travis">
+    <img src="https://img.shields.io/travis/autonomio/signs/master.svg?style=for-the-badge&logo=appveyor" alt="Signs Travis">
   </a>
 
   <a href="https://coveralls.io/github/autonomio/talos">
-    <img src="https://img.shields.io/coveralls/github/autonomio/signs.svg?style=for-the-badge&logo=appveyor" alt="Talos Coveralls">
+    <img src="https://img.shields.io/coveralls/github/autonomio/signs.svg?style=for-the-badge&logo=appveyor" alt="Signs Coveralls">
   </a>
 
 </p>
 
 <p align="center">
+  <a href="#Key-Features">Signs</a> •
   <a href="#Key-Features">Key Features</a> •
   <a href="#Examples">Examples</a> •
   <a href="#Install">Install</a> •
@@ -30,15 +31,18 @@
 </p>
 <hr>
 <p align="center">
-Signs unifies Gensim and SpaCy <strong>vectorization backends for Keras users</strong>. Signs provides an easy-to-use vectorization solution to manage complex preprocessing, vectorization, and evaluation workflows through <strong>intuitive one-line commands</strong>.
+If you want the simplest possible way to generate embeddings for deep learning models without sacrificing the power of state-of-the-art vector models, Signs is for you.
+
 </p>
 <p align="center">
-<img src='https://cdn-images-1.medium.com/max/1600/1*Ua721c4o0oCpAloeT32wdA.jpeg' width=350px>
+<img src='https://cdn-images-1.medium.com/max/1600/1*Ua721c4o0oCpAloeT32wdA.jpeg' width=300px>
 </p>
 
-### Key Features
+### Signs
 
-Signs is a set of tools for text preparation, vectorization and processing and radically simplifies raw text to Keras embeddings workflow. Signs provides a meaningful replacement for dozens of lines of redundant code that are currently required to transform raw text into a a Keras Embeds layer. Key features include:
+Signs is a set of tools for text preparation, vectorization and processing and radically simplifies raw text to Keras embeddings workflow. Signs unifies Gensim and SpaCy <strong>vectorization backends for Keras users</strong> and provides an easy-to-use vectorization solution to manage otherwise complex workflows. Signs provides a meaningful replacement for dozens of lines of redundant code that are currently required to transform raw text into a a Keras Embeds layer. 
+
+### Key Features
 
 - unifies Gensim and SpaCy vectorization backends
 - supports using common vector models: [GloVe](https://nlp.stanford.edu/projects/glove/), [Fasttext](https://fasttext.cc/docs/en/english-vectors.html), and [word2vec](https://en.wikipedia.org/wiki/Word2vec)
