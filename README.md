@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://autonom.io"><img src="https://raw.githubusercontent.com/autonomio/signs/master/logo.png" alt="Signs" width="300"></a>
+  <a href="http://autonom.io"><img src="https://raw.githubusercontent.com/autonomio/signs/master/logo.png" alt="Signs" width="150"></a>
   <br>
 </h1>
 
@@ -33,7 +33,7 @@
 Signs unifies Gensim and SpaCy <strong>vectorization backends for Keras users</strong>. Signs provides an easy-to-use vectorization solution to manage complex preprocessing, vectorization, and evaluation workflows through <strong>intuitive one-line commands</strong>.
 </p>
 <p align="center">
-<img src='https://i.ibb.co/3NFH646/keras-model-to-talos.gif' width=550px>
+<img src='https://cdn-images-1.medium.com/max/1600/1*Ua721c4o0oCpAloeT32wdA.jpeg' width=350px>
 </p>
 
 ### Key Features
@@ -51,10 +51,12 @@ Signs is a set of tools for text preparation, vectorization and processing and r
 - Allows completely automated text preprocessing
 
 
-#### Examples
+### Examples
 
-<img src=https://i.ibb.co/sVLpDH4/signs-nlp-keras-embeddings.png>
-[get source code](https://gist.github.com/mikkokotila/ad0138788c93bef2b71eaccc9c95701b)
+[get source](https://gist.github.com/mikkokotila/ad0138788c93bef2b71eaccc9c95701b) for the below example.
+
+<img src=https://i.ibb.co/VqX0hmG/signs-nlp-keras-embeddings.png>
+
 
 ### Install
 
@@ -68,7 +70,7 @@ Daily development version:
 
 ### Support
 
-If you want ask a **"how can I use Talos to..."** question, the right place is [StackOverflow](https://stackoverflow.com/questions/ask).
+If you want ask a **"how can I use Signs to..."** question, the right place is [StackOverflow](https://stackoverflow.com/questions/ask).
 
 If you found a bug or want to suggest a feature, check the [issues](https://github.com/autonomio/signs/issues) or [create](https://github.com/autonomio/signs/issues/new/choose) a new issue.
 
