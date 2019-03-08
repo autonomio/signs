@@ -27,13 +27,24 @@ class Embeds:
 
         self.x, self.vocab_size, self.word_index = tokenize(self.docs)
         self.embedding_matrix = embedding_matrix(self.word_index,
-                                                       self.vector_dims,
-                                                       self.embeddings_index)
+                                                 self.vector_dims,
+                                                 self.embeddings_index)
 
     def layer(self, docs):
 
         '''Takes as input a series or array of documents and returns
-        a Keras Embeds layer'''
+        a Keras embeddings layer and x data. 
+
+        USE:
+
+        embeds_layer, x = e.layer(docs) 
+
+        then in Keras model: 
+
+        model.add(embeds_layer)
+        model.fit(x=x)
+
+        '''
 
         self.docs = docs
 
