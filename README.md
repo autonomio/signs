@@ -61,6 +61,13 @@ Signs is a set of tools for text preparation, vectorization and processing and r
 
 <img src=https://i.ibb.co/VqX0hmG/signs-nlp-keras-embeddings.png>
 
+NOTE: in the below examples *docs* contains a list of lists where each sublist is a document (string).
+
+    # clean 
+    [[si.Clean(doc, True).text] for doc in docs]
+
+    # get grams
+    [si.Grams(doc[0].split()).ngrams(ngram=3, skip=2) for doc in docs]
 
 ### Install
 

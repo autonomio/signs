@@ -1,27 +1,41 @@
 import re
 import string
 
+from ..utils.stopwords import stopwords
+
+
 class Clean:
     
     def __init__(self, text, auto=False, remove_string=''):
-        
-        self.text = text
+
+        if isinstance(text, list):
+            self.text = text[0]
+        else:
+            self.text = text
+
         self.remove_string = remove_string
 
         if auto:
-        	self._null_ = self.automated()
+        	self.automated()
 
     def automated(self):
 
-    	self.text = self.decod()
-    	self.text = self.low()
-    	self.text = self.links()
-    	self.text = self.emoji()
-    	self.text = self.punct()
-    	self.text = self.linebreaks()
-    	self.text = self.string()
-    	self.text = self.leadtrail()
-        
+        self.text = self.decod()
+        self.text = self.low()
+        self.text = self.links()
+        self.text = self.emoji()
+        self.text = self.punct()
+        self.text = self.linebreaks()
+        self.text = self.string()
+        self.text = self.leadtrail()
+        self.text = self.stopword()
+
+
+    def stopword(self):
+        '''Remove stopwords (english)'''
+        out = [word for word in self.text.split() if word not in stopwords()]
+        return ' '.join(word for word in out)
+
 
     def string(self):
     	'''remove arbitrary string'''
