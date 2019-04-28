@@ -8,15 +8,18 @@ class Clean:
     
     def __init__(self, text, auto=False, remove_string=''):
 
+        self.remove_string = remove_string
+
         if isinstance(text, list):
             self.text = text[0]
         else:
             self.text = text
 
-        self.remove_string = remove_string
-
         if auto:
-        	self.automated()
+            if self.text is None:
+                pass
+            else:
+                self.automated()
 
     def automated(self):
 
