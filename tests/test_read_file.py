@@ -7,6 +7,6 @@ def test_read_file():
 	f.write(s)
 	f.close()
 
-    out = read_file('temp.txt')
-    if out != ['here is test \n', ' that goes into a file \n']:
-        raise ValueError('read_file() test failed')
+	out = read_file('temp.txt')
+	if out != ['here is test \n', ' that goes into a file \n']:
+	    raise ValueError('read_file() test failed')
