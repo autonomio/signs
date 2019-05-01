@@ -97,7 +97,6 @@ if __name__ == "__main__":
           packages=['signs',
                     'signs.preprocess',
                     'signs.vectorize',
-                    'signs.tests',
                     'signs.grams',
                     'signs.utils',
                     'signs.models',
