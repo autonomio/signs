@@ -49,6 +49,7 @@ class Transform:
         '''Returns a single string with blobbed documents'''
 
         if clean:
-            return [self.Clean(doc, auto=True).text for doc in self.documents]
+            return self.lists_to_blob(
+                [self.Clean(doc, auto=True).text for doc in self.documents])
         else:
             return self.lists_to_blob(self.documents)

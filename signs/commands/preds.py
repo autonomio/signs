@@ -1,6 +1,9 @@
 import pandas as pd
 from ..utils.converters import embeds_to_text
-from kerasplotlib.text import text
+try:
+    from kerasplotlib.text import text
+except ImportError:
+    print('Matplotlib failed to import')
 
 
 class Preds:

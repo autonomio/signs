@@ -1,4 +1,4 @@
-from ..utils.file import read_file
+from signs.utils.file import read_file
 
 
 s = "here is test \n that goes into a file \n"

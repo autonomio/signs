@@ -6,9 +6,9 @@ from ..utils.stopwords import stopwords
 
 class Clean:
     
-    def __init__(self, text, auto=False, remove_string=''):
+    def __init__(self, text, auto=True, remove_string=''):
 
-        self.remove_string = remove_string
+        self._remove_string = remove_string
 
         if isinstance(text, list):
             self.text = text[0]
@@ -31,18 +31,22 @@ class Clean:
         self.text = self.linebreaks()
         self.text = self.string()
         self.text = self.leadtrail()
-        self.text = self.stopword()
+        self.text = self.whitespace()
 
+    def string(self, remove_string=None):
+    	
+        '''remove arbitrary string'''
 
-    def stopword(self):
-        '''Remove stopwords (english)'''
-        out = [word for word in self.text.split() if word not in stopwords()]
-        return ' '.join(word for word in out)
+        if remove_string is None:
+            remove_string = self._remove_string
+    	
+        return self.text.replace(remove_string, '')
 
+    def whitespace(self):
 
-    def string(self):
-    	'''remove arbitrary string'''
-    	return self.text.replace(self.remove_string, '')
+        '''Remove extra whitespaces'''
+
+        return ' '.join(self.text.split())
 
     def low(self):
         
