@@ -11,6 +11,7 @@ install:
 - python setup.py install
 - pip install coveralls
 script:
+- sudo rm -f /etc/boto.cfg
 - coverage run --source=signs ./test_script.py
 after_success: coveralls
 deploy:
