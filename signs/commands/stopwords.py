@@ -1,12 +1,12 @@
 class Stopwords:
-    
+
     def __init__(self,
                  docs,
                  common_stopwords=True,
                  add_stopwords=[],
                  min_length=2,
                  max_threshold=10):
-        
+
         '''Accepts as input a list-of-lists where
         each sublist is a document represented in tokens.
 
@@ -24,9 +24,9 @@ class Stopwords:
             Keep all words that are at least this long.
 
         '''
-        
+
         import string
-        
+
         self.common_stopwords = common_stopwords
         self.add_stopwords = add_stopwords
         self.min_length = min_length
@@ -35,14 +35,14 @@ class Stopwords:
         self.string = string
         self.stopwords = self.stopword_index()
         self.docs = docs
-        
+
         for i in range(len(docs)):
             self.docs[i] = self.check_stopwords(docs[i])
-            
+
     def stopword_index(self):
 
         import numpy as np
-        
+
         out = []
 
         if self.common_stopwords is True:
@@ -67,11 +67,11 @@ class Stopwords:
                     stopword_dict[word[0]] = [word]
 
         return stopword_dict
-         
+
     def check_stopwords(self, doc):
 
         out = []
-        
+
         for word in doc:
 
             # always keep words longer than 10 characters
@@ -84,8 +84,8 @@ class Stopwords:
 
             elif word[0] not in self.stopwords.keys():
                 out.append(word)
-            
+
             elif word not in self.stopwords[word[0]]:
                 out.append(word)
-        
+
         return out

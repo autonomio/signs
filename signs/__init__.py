@@ -7,6 +7,7 @@ from .commands.describe import Describe
 from .commands.transform import Transform
 from .commands.docsimilarity import DocSimilarity
 from .commands.stopwords import Stopwords
+from .commands.autoprep import AutoPrep
 
 from .grams.grams import Grams
 from .vectorize.gensim_doc2vec_train import gensim_doc2vec_train as TrainDoc2Vec
