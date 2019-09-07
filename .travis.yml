@@ -8,7 +8,7 @@ python:
 install:
 - pip install setuptools==41.0.0 --upgrade --ignore-installed
 - pip install -r requirements.txt
-- pip uninstall numpy
+- pip uninstall numpy -y
 - pip install numpy --upgrade --ignore-installed
 - pip install google_compute_engine
 - python setup.py install
