@@ -1,87 +1,88 @@
-<img src='https://raw.githubusercontent.com/autonomio/signs/master/logo.png'>
+<h1 align="center">
+  <br>
+  <a href="http://autonom.io"><img src="https://raw.githubusercontent.com/autonomio/signs/master/logo.png" alt="Signs" width="150"></a>
+  <br>
+</h1>
 
-[![Build Status](https://travis-ci.org/autonomio/signs.svg?branch=master)](https://travis-ci.org/autonomio/signs) [![Coverage Status](https://coveralls.io/repos/github/autonomio/signs/badge.svg?branch=master)](https://coveralls.io/github/autonomio/signs?branch=master) [![CodeFactor](https://www.codefactor.io/repository/github/autonomio/signs/badge)](https://www.codefactor.io/repository/github/autonomio/signs)
+<h3 align="center">Text processing for Deep Learning</h3>
 
-A set of tools for text preparation, vectorization and processing. The below explains the functionalities included in Signs. 
+<p align="center">
 
-## 1. features 
+  <a href="https://travis-ci.org/autonomio/talos">
+    <img src="https://img.shields.io/travis/autonomio/signs/master.svg?style=for-the-badge&logo=appveyor" alt="Signs Travis">
+  </a>
 
-1.1) preprocessing
+  <a href="https://coveralls.io/github/autonomio/talos">
+    <img src="https://img.shields.io/coveralls/github/autonomio/signs.svg?style=for-the-badge&logo=appveyor" alt="Signs Coveralls">
+  </a>
 
-1.2) vectorization model training
+</p>
 
-1.3) vectorization
+<p align="center">
+  <a href="#Key-Features">Signs</a> •
+  <a href="#Key-Features">Key Features</a> •
+  <a href="#Examples">Examples</a> •
+  <a href="#Install">Install</a> •
+  <a href="#Support">Support</a> •
+  <a href="https://autonomio.github.io/docs_signs">Docs</a> •
+  <a href="https://github.com/autonomio/sigs/issues">Issues</a> •
+  <a href="#License">License</a> •
+  <a href="https://github.com/autonomio/signs/archive/master.zip">Download</a>
+</p>
+<hr>
+<p align="center">
+If you want the simplest possible way to generate embeddings for deep learning models without sacrificing the power of state-of-the-art vector models, Signs is for you.
 
-1.4) down stream applications
+</p>
+<p align="center">
+<img src='https://cdn-images-1.medium.com/max/1600/1*Ua721c4o0oCpAloeT32wdA.jpeg' width=300px>
+</p>
 
+### Signs
 
-## 1.1. preprocessing 
+Signs is a set of tools for text preparation, vectorization and processing and radically simplifies raw text to Keras embeddings workflow. Signs unifies Gensim and SpaCy <strong>vectorization backends for Keras users</strong> and provides an easy-to-use vectorization solution to manage otherwise complex workflows. Signs provides a meaningful replacement for dozens of lines of redundant code that are currently required to transform raw text into a a Keras Embeds layer. 
 
-- remove stopwords
-- remove punctuations
-- to lower 
-- capitalization
-- remove line breaks
-- remove emojis and other icons
-- remove trailing and leading whitespace
-- remove tabs 
-- surpress whitespaces (trim to one)
+### Key Features
 
-
-## 1.2. vectorization model training 
-
-In order to vector words and documents, there needs to be two different options: 
-
-- use pre-trained model such as Spacy
-- train models using a custom corpus
-
-## 1.3. vectorization
-
-### 1.3.1 word and document vectorization
-
-There are two types of vectorization: 
-
-- word vectorization (single word)
-- document vectorization (anything longer than a single word)
-
-NOTE: it is the case that word vectors can be used to create document vectors using averaging[source](http://aclweb.org/anthology/P/P16/P16-1089.pdf), TF-IDF[source](http://aclweb.org/anthology/P/P16/P16-1089.pdf) and so forth. It is also the case that approaches specifically targeting document vectorization (i.e. skipping the need to vectorize words explicity first is skipped) are available.
-
-Signs supports all three approaches: 
-
-- word vectorization 
-- word vectorization based document vectorization
-- direct vectorization
-
-### 1.3.2 other distinctions
-
-Generally speaking the text can be treated in two ways: 
-
-- words
-- characters
-
-Both of these can be treated directly, or by using various approaches to producing 'grams':
-
-- ngrams
-- skipgrams
-- flexgrams
-
-There are two approaches to leveraging various gram approaches; one where the documents are first transformed [example](https://github.com/keras-team/keras/blob/master/examples/imdb_fasttext.py) and the other where a an inbuilt feature of a model is used [example]((https://radimrehurek.com/gensim/models/word2vec.html))
+- unifies Gensim and SpaCy vectorization backends
+- supports using common vector models: [GloVe](https://nlp.stanford.edu/projects/glove/), [Fasttext](https://fasttext.cc/docs/en/english-vectors.html), and [word2vec](https://en.wikipedia.org/wiki/Word2vec)
+- removes NLP learning curve
+- adds no more than a few lines of code to your worflow
+- From text to Keras embedding layer in a single command
+- Train, save, and load custom vectors
+- Evaluate results after training a Keras prediction model
+- Powerful text preprocessing features
+- Allows completely automated text preprocessing
 
 
-## 1.4. Downstream Applications 
+### Examples
 
-The main intended use case for Signs is to provide the suitable data for making classifications with deep learning models. Most notably:
+[get source](https://gist.github.com/mikkokotila/ad0138788c93bef2b71eaccc9c95701b) for the below example.
 
-- plain vanilla vectors 
-- data for sequantial models 
+<img src=https://i.ibb.co/VqX0hmG/signs-nlp-keras-embeddings.png>
 
-There is also support for various tasks directly withing Signs for both words and documents: 
+Several example notebooks with common workflows can be found [here](https://github.com/autonomio/signs/tree/master/examples).
 
-- similarity 
-- part of speech tagging
-- classification
+### Install
 
-## 2 Useful Links
+Stable version:
 
-- gensim FastText [source](https://rare-technologies.com/sent2vec-an-unsupervised-approach-towards-learning-sentence-embeddings/)
-- Efficient n-gram & skipgram modelling on text corpora [source](https://proycon.github.io/colibri-core/)
+#### `pip install signs`
+
+Daily development version:
+
+#### `pip install git+https://github.com/autonomio/signs.git@daily-dev`
+
+### Support
+
+If you want ask a **"how can I use Signs to..."** question, the right place is [StackOverflow](https://stackoverflow.com/questions/ask).
+
+If you found a bug or want to suggest a feature, check the [issues](https://github.com/autonomio/signs/issues) or [create](https://github.com/autonomio/signs/issues/new/choose) a new issue.
+
+
+### License
+
+[MIT License](https://github.com/autonomio/signs/blob/master/LICENSE)
+
+
+

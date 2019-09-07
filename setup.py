@@ -17,7 +17,7 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://autonom.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/autonomio/signs/'
-VERSION = '0.1.2'
+VERSION = '0.1.3'
 
 try:
     from setuptools import setup
@@ -69,7 +69,12 @@ def check_dependencies():
         import tensorflow
     except ImportError:
         install_requires.append('tensorflow')
-        
+
+    try:
+        import ipython
+    except ImportError:
+        install_requires.append('ipython')
+
     return install_requires
 
 
@@ -92,7 +97,6 @@ if __name__ == "__main__":
           packages=['signs',
                     'signs.preprocess',
                     'signs.vectorize',
-                    'signs.tests',
                     'signs.grams',
                     'signs.utils',
                     'signs.models',

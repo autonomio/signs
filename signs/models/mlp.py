@@ -1,5 +1,3 @@
-from numpy import array, transpose
-
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Embedding
 from kerasplotlib import TrainingLog
@@ -19,6 +17,9 @@ def mlp(x,
         x_test=None,
         y_test=None):
 
+    '''Trains a basic MLP style neural network
+    with embedding_matrix from Embeds().layer()'''
+
     model = Sequential()
     model.add(Embedding(vocab_size,
               vector_dims,
@@ -29,7 +30,10 @@ def mlp(x,
     model.add(Dropout(dropout))
 
     # add layers
-    model = layers_dense(model, layers, dropout, inner_neurons)
+    if layers > 0:
+        for i in range(layers):
+            model.add(Dense(inner_neurons))
+            model.add(Dropout(dropout))
 
     model.add(Dense(1, activation='sigmoid'))
     model.compile(optimizer='adam', loss=loss, metrics=['acc'])
@@ -40,16 +44,5 @@ def mlp(x,
               validation_split=.3,
               callbacks=[TrainingLog()])
     # loss, accuracy = model.evaluate(x, y, verbose=0)
-
-    return model
-
-
-def layers_dense(model, layers, dropout, inner_neurons):
-
-    if layers > 0:
-
-        for i in range(layers):
-            model.add(Dense(inner_neurons))
-            model.add(Dropout(dropout))
 
     return model

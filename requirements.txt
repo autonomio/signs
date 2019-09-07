@@ -6,3 +6,4 @@ spacy
 keras
 gensim
 tensorflow
+ipython

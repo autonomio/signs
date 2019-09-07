@@ -1,9 +1,20 @@
-from signs.tests import preprocess_clean
-from signs.tests import utils_file
-from signs.tests import vectorize_spacy
-# from signs.tests import vectorize_gensim
+from tests.test_clean import test_clean
+from tests.test_stopwords import test_stopwords
+from tests.test_vectorize_spacy import test_vectorize_spacy
+from tests.test_read_file import test_read_file
+from tests.test_transform import test_transform
 
-preprocess_clean.run_test()
-utils_file.run_test()
-vectorize_spacy.run_test()
-# vectorize_gensim.run_test()
+print('Testing Clean() ...')
+test_clean()
+
+print('Testing Stopwords() ...')
+test_stopwords()
+
+print('Testing Transform() ...')
+test_transform()
+
+print('Testing vectorize_spacy()')
+test_vectorize_spacy()
+
+print('Testing read_file()')
+test_read_file()
