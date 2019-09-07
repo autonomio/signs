@@ -17,7 +17,7 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://autonom.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/autonomio/signs/'
-VERSION = '0.1.3'
+VERSION = '0.1.4'
 
 try:
     from setuptools import setup
@@ -95,6 +95,7 @@ if __name__ == "__main__":
           download_url=DOWNLOAD_URL,
           install_requires=install_requires,
           packages=['signs',
+                    'signs.commands',
                     'signs.preprocess',
                     'signs.vectorize',
                     'signs.grams',
