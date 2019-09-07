@@ -1,11 +1,12 @@
 dist: trusty
 sudo: required
-before_install: 
+before_install:
 language: python
 python:
 - '3.5'
 - '3.6'
 install:
+- pip install numpy --upgrade --ignore-installed
 - pip install -r requirements.txt
 - pip install google_compute_engine
 - python setup.py install
