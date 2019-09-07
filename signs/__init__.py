@@ -1,3 +1,6 @@
+import warnings
+warnings.simplefilter('ignore')
+
 from .commands.embeds import Embeds
 from .commands.clean import Clean
 from .commands.preds import Preds
