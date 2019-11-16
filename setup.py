@@ -32,7 +32,6 @@ install_requires = ['kerasplotlib',
                     'spacy',
                     'gensim',
                     'keras',
-                    'tensorflow',
                     'ipython']
 
 if __name__ == "__main__":
