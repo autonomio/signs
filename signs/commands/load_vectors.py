@@ -18,7 +18,9 @@ class LoadVectors:
     Alternative a local vector file can be loaded or one of the
     other spacy vectors.
 
-    trained_vectors :: name or path to the pre-trained vector file
+    trained_vectors :: name or path to the pre-trained vector file. 
+                       If set to 'en' then spacy small web vectors 
+                       will be used.
     backend :: either 'spacy' or 'gensim'
     mode :: applies to backend 'gensim'. The options are 'glove', 'word2vec',
             and 'fasttext'
@@ -44,7 +46,14 @@ class LoadVectors:
     def load_model(self):
 
         if self.backend == 'spacy':
-            self.model = sp.load(self.trained_vectors)
+
+            if self.trained_vectors == 'en':
+
+                import en_core_web_sm
+                self.model = en_core_web_sm.load()
+            
+            else:
+                self.model = sp.load(self.trained_vectors)
 
         elif self.backend == 'gensim':
 

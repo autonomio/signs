@@ -78,7 +78,7 @@ class Grams:
 
         out = []
 
-        for i in [random.choices(i, k=length-flex_n) for i in combinations]:
+        for i in [random.sample(i, k=length-flex_n) for i in combinations]:
             if len(i) == len(set(i)):
                 if i not in out:
                     out.append(i)
@@ -103,7 +103,7 @@ class Grams:
 
         while len(out) < n:
 
-            gram = random.choices(self._text, k=length)
+            gram = random.sample(self._text, k=length)
 
             if len(set(gram)) == length:
                 if gram not in out:

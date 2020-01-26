@@ -17,7 +17,7 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://autonom.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/autonomio/signs/'
-VERSION = '0.2.4'
+VERSION = '0.3.0'
 
 try:
     from setuptools import setup
@@ -29,6 +29,7 @@ install_requires = ['kerasplotlib',
                     'wrangle',
                     'pandas',
                     'numpy',
+                    'cython',
                     'spacy',
                     'gensim',
                     'keras',

@@ -21,8 +21,12 @@ jobs:
     - name: Dependencies
       run: |
         export MPLBACKEND=agg
-        python -m pip install --upgrade pip
+        pip install --upgrade pip
+        pip install cython
+        pip install tensorflow
+        pip install coveralls
         pip install -r requirements.txt
+        python -m spacy download en
     - name: Style
       run: |
         pip install flake8
@@ -31,9 +35,7 @@ jobs:
     - name: Tests
       run: |
         export MPLBACKEND=agg
-        pip install tensorflow
-        pip install coveralls
-        coverage run --source=signs ./test_script.py
+        coverage run --source=signs ./test-ci.py
     - name: Coverage
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
