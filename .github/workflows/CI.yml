@@ -21,6 +21,7 @@ jobs:
     - name: Dependencies
       run: |
         export MPLBACKEND=agg
+        pip install --upgrade pip
         pip install cython
         python -m pip install --upgrade pip
         pip install -r requirements.txt
