@@ -4,7 +4,7 @@
 
 import os
 
-DESCRIPTION = "Talos Hyperparameter Scanner for Keras"
+DESCRIPTION = "Signs Text Processing for Deep Learning"
 LONG_DESCRIPTION = """\
 Signs is a utility for text preprocessing, vectorizing, and analysis
 such as semantic similarity, mainly for the purpose of using unstructured
@@ -17,7 +17,7 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://autonom.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/autonomio/signs/'
-VERSION = '0.1.4'
+VERSION = '0.3.0'
 
 try:
     from setuptools import setup
@@ -25,62 +25,17 @@ try:
 except ImportError:
     from distutils.core import setup
 
-
-def check_dependencies():
-
-    install_requires = []
-
-    try:
-        import kerasplotlib
-    except ImportError:
-        install_requires.append('kerasplotlib')
-
-    try:
-        import wrangle
-    except ImportError:
-        install_requires.append('wrangle')
-
-    try:
-        import numpy
-    except ImportError:
-        install_requires.append('numpy')
-
-    try:
-        import pandas
-    except ImportError:
-        install_requires.append('pandas')
-
-    try:
-        import spacy
-    except ImportError:
-        install_requires.append('spacy')
-
-    try:
-        import keras
-    except ImportError:
-        install_requires.append('keras')
-
-    try:
-        import gensim
-    except ImportError:
-        install_requires.append('gensim')
-
-    try:
-        import tensorflow
-    except ImportError:
-        install_requires.append('tensorflow')
-
-    try:
-        import ipython
-    except ImportError:
-        install_requires.append('ipython')
-
-    return install_requires
-
+install_requires = ['kerasplotlib',
+                    'wrangle',
+                    'pandas',
+                    'numpy',
+                    'cython',
+                    'spacy',
+                    'gensim',
+                    'keras',
+                    'ipython']
 
 if __name__ == "__main__":
-
-    install_requires = check_dependencies()
 
     setup(name=DISTNAME,
           author=MAINTAINER,

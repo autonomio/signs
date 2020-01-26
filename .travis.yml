@@ -3,20 +3,9 @@ sudo: required
 before_install:
 language: python
 python:
-- '3.5'
 - '3.6'
-install:
-- pip install setuptools==41.0.0 --upgrade --ignore-installed
-- pip install -r requirements.txt
-- pip uninstall numpy -y
-- pip install numpy --upgrade --ignore-installed
-- pip install google_compute_engine
-- python setup.py install
-- pip install coveralls
 script:
-- sudo rm -f /etc/boto.cfg
-- coverage run --source=signs ./test_script.py
-after_success: coveralls
+- echo
 deploy:
   provider: pypi
   user: mikkokotila

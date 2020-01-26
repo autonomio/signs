@@ -2,8 +2,8 @@ kerasplotlib
 wrangle
 numpy
 pandas
+cython
 spacy
 keras
 gensim
-tensorflow
 ipython
