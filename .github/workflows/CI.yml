@@ -26,6 +26,7 @@ jobs:
         pip install tensorflow
         pip install coveralls
         pip install -r requirements.txt
+        python -m spacy download en
     - name: Style
       run: |
         pip install flake8
