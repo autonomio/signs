@@ -23,7 +23,8 @@ jobs:
         export MPLBACKEND=agg
         pip install --upgrade pip
         pip install cython
-        python -m pip install --upgrade pip
+        pip install tensorflow
+        pip install coveralls
         pip install -r requirements.txt
     - name: Style
       run: |
@@ -33,8 +34,6 @@ jobs:
     - name: Tests
       run: |
         export MPLBACKEND=agg
-        pip install tensorflow
-        pip install coveralls
         coverage run --source=signs ./test-ci.py
     - name: Coverage
       env:
