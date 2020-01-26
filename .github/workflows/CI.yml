@@ -33,7 +33,7 @@ jobs:
         export MPLBACKEND=agg
         pip install tensorflow
         pip install coveralls
-        coverage run --source=signs ./test_script.py
+        coverage run --source=signs ./test-ci.py
     - name: Coverage
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
