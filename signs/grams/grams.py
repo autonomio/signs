@@ -103,7 +103,7 @@ class Grams:
 
         while len(out) < n:
 
-            gram = random.choices(self._text, k=length)
+            gram = random.sample(self._text, k=length)
 
             if len(set(gram)) == length:
                 if gram not in out:
