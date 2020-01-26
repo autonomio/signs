@@ -11,7 +11,7 @@ def spacy_load(trained_vectors='en'):
 
     '''
 
-    if self.trained_vectors == 'en':
+    if trained_vectors == 'en':
 
         import en_core_web_sm
         return en_core_web_sm.load()
