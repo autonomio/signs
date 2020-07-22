@@ -1,10 +1,5 @@
 import pandas as pd
 from ..utils.converters import embeds_to_text
-try:
-    from kerasplotlib.text import text
-except ImportError:
-    print('Matplotlib failed to import')
-
 
 class Preds:
 
@@ -39,6 +34,8 @@ class Preds:
         return results
 
     def _printing(self, data, title, n, notebook):
+
+        from kerasplotlib.text import text
 
         data.drop_duplicates(inplace=True)
 

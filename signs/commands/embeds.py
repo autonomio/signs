@@ -2,8 +2,6 @@ from ..preprocess.embedding_index import embedding_index
 from ..preprocess.embedding_matrix import embedding_matrix
 from ..preprocess.tokenize import tokenize
 
-from keras.layers import Embedding
-
 
 class Embeds:
 
@@ -45,6 +43,8 @@ class Embeds:
         model.fit(x=x)
 
         '''
+
+        from keras.layers import Embedding
 
         self.docs = docs
 

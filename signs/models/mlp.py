@@ -1,8 +1,3 @@
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Flatten, Embedding
-from kerasplotlib import TrainingLog
-
-
 def mlp(x,
         y,
         vocab_size,
@@ -19,6 +14,10 @@ def mlp(x,
 
     '''Trains a basic MLP style neural network
     with embedding_matrix from Embeds().layer()'''
+
+    from keras.models import Sequential
+    from keras.layers import Dense, Dropout, Flatten, Embedding
+    from kerasplotlib import TrainingLog
 
     model = Sequential()
     model.add(Embedding(vocab_size,
