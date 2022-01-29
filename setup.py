@@ -17,7 +17,7 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://autonom.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/autonomio/signs/'
-VERSION = '0.3.1'
+VERSION = '0.3.2'
 
 try:
     from setuptools import setup
