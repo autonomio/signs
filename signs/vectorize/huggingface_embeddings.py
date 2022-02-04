@@ -9,10 +9,10 @@ class HuggingfaceEmbeddings:
         self.checkpoint=checkpoint
         self.tokenizer = AutoTokenizer.from_pretrained(self.checkpoint)
         self.model = AutoModel.from_pretrained(self.checkpoint)
-    def huggingface_generate_embeddings(self,docs):
+    def generate_huggingface_embeddings(self,docs):
         """
         Generate huggingface embeddings.
-        Input is a `string` or a `list` of `strings` to be encoded. 
+        Arguments: `string` or a `list` of `strings` to be encoded. 
         """
         model=self.model
         tokenizer=self.tokenizer
