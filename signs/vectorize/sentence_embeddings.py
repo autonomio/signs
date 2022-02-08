@@ -16,7 +16,7 @@ class SentenceEmbeddings:
         """
         Generates sentence embeddings
         Arguments:
-            `Docs`| `String` or `List` of `Strings`
+            `Docs`| `String` or `List` of `Strings`| The docs to be encoded
         Returns:
             list of embeddings
 

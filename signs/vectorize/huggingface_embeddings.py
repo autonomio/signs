@@ -18,7 +18,7 @@ class HuggingfaceEmbeddings:
         """
         Generate huggingface embeddings.
         Arguments:
-            docs|`string` or a `list` of `strings`
+            docs|`string` or a `list` of `strings`|The docs to be encoded
         returns:
             tuple of tensors
 
