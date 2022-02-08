@@ -4,7 +4,7 @@
   <br>
 </h1>
 
-<h3 align="center">Text processing for Deep Learning</h3>
+<h3 align="center">Computational Text Processing for Humans</h3>
 
 <p align="center">
 
