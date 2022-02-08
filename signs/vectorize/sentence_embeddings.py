@@ -3,9 +3,9 @@ from sentence_transformers import SentenceTransformer
 
 class SentenceEmbeddings:
     """
-    Arguments:
-        Checkpoint: model name avaialable from sbert.net
     Loads model available from from sbert.net
+    Arguments:
+        Checkpoint|str| model name avaialable from sbert.net
     """
 
     def __init__(self, checkpoint="paraphrase-MiniLM-L6-v2"):
@@ -14,9 +14,9 @@ class SentenceEmbeddings:
 
     def generate_sentence_embeddings(self, docs):
         """
-        Arguments:
-            `Docs`: `String` or `List` of `Strings`
         Generates sentence embeddings
+        Arguments:
+            `Docs`| `String` or `List` of `Strings`
         Returns:
             list of embeddings
 

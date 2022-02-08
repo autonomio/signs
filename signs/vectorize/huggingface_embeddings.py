@@ -3,11 +3,10 @@ from transformers import AutoModel, AutoTokenizer
 
 class HuggingfaceEmbeddings:
     """
-    Arguments:
-        Checkpoint:
-            Checkpoint name from huggingface model hub
     loads a `model` and `tokenizer` from huggingface from the given
         checkpoint if in local storage or huggingface hub
+    Arguments:
+        Checkpoint|str|Checkpoint name from huggingface model hub
     """
 
     def __init__(self, checkpoint="prajjwal1/bert-small"):
@@ -17,9 +16,9 @@ class HuggingfaceEmbeddings:
 
     def generate_huggingface_embeddings(self, docs):
         """
-
-        Arguments: `string` or a `list` of `strings` to be encoded.
         Generate huggingface embeddings.
+        Arguments:
+            docs|`string` or a `list` of `strings`
         returns:
             tuple of tensors
 
