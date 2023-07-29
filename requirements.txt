@@ -7,3 +7,4 @@ spacy
 keras
 gensim
 ipython
+sentence_transformers
