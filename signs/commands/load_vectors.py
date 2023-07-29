@@ -1,15 +1,3 @@
-import os
-
-import spacy as sp
-try:
-    import en_core_web_sm
-except ModuleNotFoundError:
-    pass
-
-from gensim.models import KeyedVectors, FastText
-from gensim.scripts.glove2word2vec import glove2word2vec
-
-
 class LoadVectors:
 
     '''Load, train, and
@@ -45,7 +33,11 @@ class LoadVectors:
 
     def load_model(self):
 
+        import os
+
         if self.backend == 'spacy':
+
+            import spacy as sp
 
             if self.trained_vectors == 'en':
 
@@ -56,6 +48,9 @@ class LoadVectors:
                 self.model = sp.load(self.trained_vectors)
 
         elif self.backend == 'gensim':
+
+            from gensim.models import KeyedVectors, FastText
+            from gensim.scripts.glove2word2vec import glove2word2vec
 
             if self.mode is None:
                 self.mode = 'glove'

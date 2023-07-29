@@ -1,6 +1,3 @@
-import spacy as sp
-
-
 def spacy_load(trained_vectors='en'):
 
     '''LOAD SPACY MODEL
@@ -11,16 +8,15 @@ def spacy_load(trained_vectors='en'):
 
     '''
 
+    import spacy
+
     if trained_vectors == 'en':
 
         import en_core_web_sm
         return en_core_web_sm.load()
 
     else:
-        return sp.load(trained_vectors)
-    
-    
-    
+        return spacy.load(trained_vectors)
 
 
 def spacy_word2vec(string, model):
